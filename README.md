@@ -47,7 +47,7 @@ PQT_barebones.getOutfits(<QUERY_PRODUCT_ID>,function(data){console.log(data)})
 
 Here, 
 
-**<QUERY_PRODUCT_ID>** is the id of the product which at the user is looking. Similar products or complementary products for the QUERY_PRODUCT_ID can be found via the findSimilar and getOutfits methods respectively.
+**<QUERY_PRODUCT_ID>** is the id of the product which at the user is looking. Similar products or complementary products for the QUERY_PRODUCT_ID can be found via the **findSimilar** and **getOutfits** methods respectively.
 
 **function(data){console.log(data)}** is a custom callback that receives the similar products/complementary products for the outfit as JSON in **data**. The JSON can be used to build UI elements and rendered on the fashion website as a widget. 
 
