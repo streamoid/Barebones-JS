@@ -1,7 +1,7 @@
 **Barebones-JS**
 ===================
 
-**Barebones-JS** is a Javascript SDK which allows fashion clients to use Streamoid's fashion intelligence as recommendations without a fixed UI template. Clients can use the SDK to build custom UI components which fit seamlessly within their own websie with the same look and feel as a widget. 
+**Barebones-JS** is a Javascript SDK which allows fashion clients to use Streamoid's fashion intelligence for recommendations without a fixed UI template. Clients can use the SDK to build custom UI components which fit seamlessly within their own websie with the same look and feel as a widget. 
 
 **Streamoid's services:**
 
@@ -70,3 +70,15 @@ Sample response:
 ```
 {"status": {"message": "Success", "code": 1000}, "data": {"products": ["5727536", "5680638", "5709644", "5709722", "5430577"], "queryData": "5685418"}}
 ```
+
+Here, 
+**status** Indicates the success of the API call 
+- message: "Success" indicates that the API call has been successful
+- code: 1000 indicates ... (all code values to be documented!)
+
+**data** Contains the recommended products 
+- products is an array containing all of the recommended product ids 
+- queryData: indicates ... (to be documented!)
+
+
+
