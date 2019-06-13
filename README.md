@@ -78,10 +78,13 @@ Sample response:
 ```
 
 Here, 
+
 **status** Indicates the success of the API call 
+
 - message: "Success" indicates that the API call has been successful
 
 **data** Contains the recommended products 
+
 - products: An array containing all of the recommended product ids 
 
 
