@@ -12,8 +12,6 @@ The below services can be accessed via the SDK:
 
 1) Similar: Find products that are similar to the one the user is looking at. 
 
-2) Outfitter: Find products which complement the product the user is looking at that can be worn together as an outfit. 
-
 **Integration**
 
 1) Adding the JS SDK 
