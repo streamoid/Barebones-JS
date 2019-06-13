@@ -58,7 +58,7 @@ Recommened product ID
 
 **Sample usage:**
 
-Once the script has been added in the head tag as shown above, Streamoid's services can be called by invoking the below functions via the PQT_barebones namespace. 
+Once the script has been added in the head tag as shown above, Streamoid's services can be called by invoking the below functions via the STREAMOID_barebones namespace. 
 
 1) Similar
 ```
@@ -69,7 +69,7 @@ Here,
 
 **<QUERY_PRODUCT_ID>** is the id of the product which at the user is looking. Similar products can be found via the **findSimilar** method respectively.
 
-**function(data){console.log(data)}** is a custom callback that receives the similar products/complementary products for the outfit as JSON in **data**. The JSON can be used to build UI elements and rendered on the fashion website as a widget. 
+**function(data){console.log(data)}** is a custom callback that receives the similar products as JSON in **data**. The JSON can be used to build UI elements and rendered on the fashion website as a widget. 
 
 Sample response:
 
