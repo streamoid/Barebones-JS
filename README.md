@@ -1,7 +1,7 @@
 **Barebones-JS**
 ===================
 
-**Barebones-JS** is a Javascript SDK which allows fashion clients to use Streamoid's services without a fixed UI template. Clients can use Streamoid's SDK to build custom UI components which fit seamlessly within their own websie with the same look and feel. 
+**Barebones-JS** is a Javascript SDK which allows fashion clients to use Streamoid's fashion intelligence as recommendations without a fixed UI template. Clients can use the SDK to build custom UI components which fit seamlessly within their own websie with the same look and feel as a widget. 
 
 **Streamoid's services:**
 
@@ -27,7 +27,7 @@ Please contact streamoid.support@streamoid.com to get your LOADER-URL, CLIENT TO
 
 2) Enabling Analytics
 
-a) User engagement with the widget can be tracked via the SDK. To do so, add the data-attributes shown in the below diagram to the UI elements. 
+a) User engagement with the widget can be tracked via the SDK. To do so, add the data-attributes shown in the below diagram to the appropriate UI elements. 
 
 ![](images/Barebones_SDK_reference.png)
 
@@ -35,6 +35,20 @@ The left and right arrows can be clicked upon by the user to see more recommened
 
 b) Clickthroughs 
 
+To track Clickthroughs post clicking on a recomended product, ensure that the following query string parameters are appeneded to URL the user is taken to:
+
+?source=similar#strmd_simpar=<QUERY_PRODUCT_ID>#strmd_sim=<RECOMMENDED_PRODUCT_ID>
+
+Usage of query string parameters, 
+
+**source**
+Indicates that the clickthrough has come from the SDK's similar recommendations
+
+**strmd_simpar**
+Parent product ID which recommened the new product viewed via the redirect 
+
+**strmd_sim**
+Recommened product ID
 
 **Sample usage**
 
@@ -47,6 +61,12 @@ PQT_barebones.findSimilar(<QUERY_PRODUCT_ID>,function(data){console.log(data)})
 
 Here, 
 
-**<QUERY_PRODUCT_ID>** is the id of the product which at the user is looking. Similar products or complementary products for the QUERY_PRODUCT_ID can be found via the **findSimilar** and **getOutfits** methods respectively.
+**<QUERY_PRODUCT_ID>** is the id of the product which at the user is looking. Similar products can be found via the **findSimilar** method respectively.
 
 **function(data){console.log(data)}** is a custom callback that receives the similar products/complementary products for the outfit as JSON in **data**. The JSON can be used to build UI elements and rendered on the fashion website as a widget. 
+
+Sample response:
+
+```
+{"status": {"message": "Success", "code": 1000}, "data": {"products": ["5727536", "5680638", "5709644", "5709722", "5430577"], "queryData": "5685418"}}
+```
