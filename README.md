@@ -82,6 +82,6 @@ Here,
 - message: "Success" indicates that the API call has been successful
 
 **data** Contains the recommended products 
-- products is an array containing all of the recommended product ids 
+- products: An array containing all of the recommended product ids 
 
 
