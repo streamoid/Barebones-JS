@@ -9,7 +9,7 @@ The below services can be accessed via the SDK:
 
 1) Similar: Find products that are similar to the one the user is looking at. 
 
-**Integration**
+**Integration:**
 
 1) Adding the SDK script
 
@@ -53,7 +53,7 @@ Parent product ID which recommened the new product viewed via the redirect
 **strmd_sim**
 Recommened product ID
 
-**Sample usage**
+**Sample usage:**
 
 Once the script has been added in the head tag as shown above, Streamoid's services can be called by invoking the below functions via the PQT_barebones namespace. 
 
