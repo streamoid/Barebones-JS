@@ -37,7 +37,7 @@ Here,
 
 The **LEFT ARROW** and **RIGHT ARROW** can be clicked upon by the user to see more recommeneded products. 
 
-**RECOMMENDATION PRODUCT** is the product is that is recommended via the use of the namespace methods explained below in the sample usage section.
+**RECOMMENDATION PRODUCT** is the product is that is recommended via the use of the namespace methods explained below in the 'Sample usage' section.
 
 b) Clickthroughs 
 
