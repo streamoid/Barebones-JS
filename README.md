@@ -1,12 +1,9 @@
 **Barebones-JS**
 ===================
 
-**Barebones-JS** is a Javascript SDK which allows fashion clients to use Streamoid's services without UI
-
+**Barebones-JS** is a Javascript SDK which allows fashion clients to use Streamoid's services without a fixed UI template. Clients can use Streamoid's SDK to build custom UI components which fit seamlessly within their own websie with the same look and feel. 
 
 **Streamoid's services:**
-
-Streamoid's services enrich fashion e-commerce websites and allow the user to find the right product or even an build an outfit. 
 
 The below services can be accessed via the SDK:
 
@@ -14,7 +11,7 @@ The below services can be accessed via the SDK:
 
 **Integration**
 
-1) Adding the JS SDK 
+1) Adding the SDK script
 
 Add the below script within the **head** tag
 
@@ -30,11 +27,13 @@ Please contact streamoid.support@streamoid.com to get your LOADER-URL, CLIENT TO
 
 2) Enabling Analytics
 
-User engagement with the widget can be tracked via the SDK. To do so, add the data-attributes shown in the below diagram to the UI elements. 
+a) User engagement with the widget can be tracked via the SDK. To do so, add the data-attributes shown in the below diagram to the UI elements. 
 
 ![](images/Barebones_SDK_reference.png)
 
 The left and right arrows can be clicked upon by the user to see more recommeneded products. 
+
+b) Clickthroughs 
 
 
 **Sample usage**
