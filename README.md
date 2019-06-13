@@ -20,7 +20,7 @@ Add the below script within the **head** tag
          i['PiqitObject']=r;i['PiqitGa']=t;i['PiqitToken'] = k;i[r]=i[r]||function() {
          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-         })(window, document, 'script', 'LOADER-URL', 'PQT', 'GA TRACKER-ID', 'CLIENT TOKEN');
+         })(window, document, 'script', 'LOADER-URL', 'STREAMOID', 'GA TRACKER-ID', 'CLIENT TOKEN');
 ```     
 
 Please contact streamoid.support@streamoid.com to get your LOADER-URL, CLIENT TOKEN, GA TRACKER-ID
@@ -62,7 +62,7 @@ Once the script has been added in the head tag as shown above, Streamoid's servi
 
 1) Similar
 ```
-PQT_barebones.findSimilar(<QUERY_PRODUCT_ID>,function(data){console.log(data)})
+STREAMOID_barebones.findSimilar(<QUERY_PRODUCT_ID>,function(data){console.log(data)})
 ```
 
 Here, 
