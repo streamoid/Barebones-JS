@@ -74,11 +74,8 @@ Sample response:
 Here, 
 **status** Indicates the success of the API call 
 - message: "Success" indicates that the API call has been successful
-- code: 1000 indicates ... (all code values to be documented!)
 
 **data** Contains the recommended products 
 - products is an array containing all of the recommended product ids 
-- queryData: indicates ... (to be documented!)
-
 
 
