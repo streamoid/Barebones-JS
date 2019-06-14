@@ -1,7 +1,7 @@
 **Barebones-JS**
 ===================
 
-Streamoid JS SDK provides 2 main features
+Streamoid's **Barebones-JS** JS SDK provides 2 main features
 
 Features
 
