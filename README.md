@@ -1,90 +1,95 @@
 **Barebones-JS**
 ===================
 
-**Barebones-JS** is a Javascript SDK which allows fashion clients to use Streamoid's fashion intelligence for recommendations without a fixed UI template. Clients can use the SDK to build custom UI components which fit seamlessly within their own website. The SDK thereby facilitates the addition of a recommendation widget with the same look and feel as the fashion website. 
+Streamoid JS SDK provides 2 main features
 
-**Streamoid's services:**
+Features
 
-The below services can be accessed via the SDK:
+Wrapper Functions
+The wrapper functions are the JS interface to Streamoid’s web services. You can call these wrapper functions to get the JSON response for Streamoid’s web services. The contents of the response can be used to render the UI for, say, Recommendation widget. 
 
-1) Similar: Find products that are similar to the one the user is looking at. 
 
-**Integration:**
+Analytics 
+In the Streamoid JS SDK, events can be logged from the client website by the addition of a few HTML attributes, listed in the section below.
 
-1) Adding the SDK script
 
-Add the below script within the **head** tag
 
-```
-(function(i,s,o,g,r,t,k,a,m){
-         i['PiqitObject']=r;i['PiqitGa']=t;i['PiqitToken'] = k;i[r]=i[r]||function() {
-         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-         })(window, document, 'script', 'LOADER-URL', 'STREAMOID', 'GA TRACKER-ID', 'CLIENT TOKEN');
-```     
+Integration
 
-Please contact streamoid.support@streamoid.com to get your LOADER-URL, CLIENT TOKEN, GA TRACKER-ID
+Please follow the below steps for integrating Streamoid JS SDK to your website 
 
-2) Enabling Analytics
+Add this loader script to the head section of the html 
 
-a) User engagement with the widget can be tracked via the SDK. To do so, add the data-attributes shown in the below diagram to the appropriate UI elements. 
+<script>
+(function(i,s,o,g,r,t,a,m){i['PiqitObject']=r;i['PiqitGa']=t;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','<Loader File>','STREAMOID','<GA-ID>','<CLIENT-TOKEN>' );
+</script>
+
+Loader File  https://js.sdk.streamoid.com/webtools/static/js/barebone_loader.js
+GA-ID  If you need the events to be logged to your Google Analytics account, you can just pass your GA-ID here
+CLIENT-TOKEN <To be provided by Streamoid>
+
+2. Add custom attributes to the web page’s relevant HTML elements
+
+Assume the client website is integrating a recommendation widget using Streamoid’s Fashion SuperIntelligent technology and the UI is similar to the below image
 
 ![](images/Barebones_SDK_reference.png)
 
-Here,
+RECOMMENDATION WIDGET 
+For the parent div corresponding to the recommendation widget, add the following attribute and value 
+Attribute: streamoid-similar-widget
+Value: ProductID of the product in the current product detail page as a string
 
-**RECOMMENDATION WIDGET** is the parent DOM node within which the recommended products are shown.
+RECOMMENDED PRODUCT
+For each div corresponding to a product inside the recommendation widget, add the following attribute and value 
+Attribute: streamoid-similar-product
+Value: ProductID of the recommended product as a string
 
-The **LEFT ARROW** and **RIGHT ARROW** can be clicked upon by the user to see more recommeneded products. 
+LEFT ARROW & RIGHT ARROW
+If the UI has clickable arrows to scroll right and left inside the widget, add the following attribute and value for left and right arrows respectively
+Attribute: streamoid-similar-widget-left-arrow
+Value: ProductID of the product in the current product detail page as a string
 
-**RECOMMENDATION PRODUCT** is the product is that is recommended via the use of the namespace methods explained below in the 'Sample usage' section.
+Attribute: streamoid-similar-widget-right-arrow
+Value: ProductID of the product in the current product detail page as a string
 
-b) Clickthroughs 
 
-To track Clickthroughs post clicking on a recomended product, ensure that the following query string parameters are appeneded to URL the user is taken to:
+
+3. Add an extra query param for each linked product URL inside the widget
+
+ When the products inside the recommendation widget are clicked, they will be navigated to the detail page corresponding to that product. To the URL of that particular detail page, add the following query string params
 
 ?source=similar#strmd_query=<QUERY_PRODUCT_ID>#strmd_result=<RECOMMENDED_PRODUCT_ID>
 
-Usage of query string parameters, 
 
-**source**
-Indicates that the clickthrough has come from the SDK's similar recommendations
+Invoking wrapper functions 
 
-**strmd_query**
-Parent product ID which recommened the new product viewed via the redirect 
 
-**strmd_result**
-Recommened product ID
+Once the script has been added in the head tag, as shown above, Streamoid's services can be called by invoking the functions in the STREAMOID_barebones namespace. 
 
-**Sample usage:**
+Example:
 
-Once the script has been added in the head tag as shown above, Streamoid's services can be called by invoking the below functions via the STREAMOID_barebones namespace. 
-
-1) Similar
-```
 STREAMOID_barebones.findSimilar(<QUERY_PRODUCT_ID>,function(data){console.log(data)})
-```
 
-Here, 
+Here, Similar products are found via the findSimilar method. <QUERY_PRODUCT_ID> is the id of the product for which the user is finding similar products. 
 
-**<QUERY_PRODUCT_ID>** is the id of the product which at the user is looking. Similar products can be found via the **findSimilar** method respectively.
-
-**function(data){console.log(data)}** is a custom callback that receives the similar products as JSON in **data**. The JSON can be used to build UI elements and rendered on the fashion website as a widget. 
+function(data){console.log(data)} is a custom callback that receives the similar products as JSON in data. The JSON can be used to build UI elements and rendered on the fashion website as a widget. 
 
 Sample response:
 
-```
 {"status": {"message": "Success", "code": 1000}, "data": {"products": ["5727536", "5680638", "5709644", "5709722", "5430577"], "queryData": "5685418"}}
-```
 
 Here, 
 
-**status** Indicates the success of the API call 
-
+status  Indicates the status of the API call 
 - message: "Success" indicates that the API call has been successful
 
-**data** Contains the recommended products 
+data Contains the recommended products  
 
 - products: An array containing all of the recommended product ids 
+
+
 
 
