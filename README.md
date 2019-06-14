@@ -50,10 +50,10 @@ Usage of query string parameters,
 **source**
 Indicates that the clickthrough has come from the SDK's similar recommendations
 
-**strmd_simpar**
+**strmd_query**
 Parent product ID which recommened the new product viewed via the redirect 
 
-**strmd_sim**
+**strmd_result**
 Recommened product ID
 
 **Sample usage:**
