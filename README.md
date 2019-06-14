@@ -27,9 +27,12 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','<Loader File>','STREAMOID','<GA-ID>','<CLIENT-TOKEN>' );
 </script>
 
+
 **Loader File**  https://js.sdk.streamoid.com/webtools/static/js/barebone_loader.js
 
+
 **GA-ID**  If you need the events to be logged to your Google Analytics account, you can just pass your GA-ID here
+
 
 **CLIENT-TOKEN** <To be provided by Streamoid>
 
