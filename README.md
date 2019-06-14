@@ -3,14 +3,12 @@
 
 Streamoid's **Barebones-JS** JS SDK provides 2 main features
 
-Features
-
-**Wrapper Functions**
+**Feature 1: Wrapper Functions**
 
 The wrapper functions are the JS interface to Streamoid’s web services. You can call these wrapper functions to get the JSON response for Streamoid’s web services. The contents of the response can be used to render the UI for, say, Recommendation widget. 
 
 
-**Analytics**
+**Feature 2: Analytics**
 
 In the SDK, events can be logged from the client website by the addition of a few HTML attributes, listed in the section below.
 
@@ -33,7 +31,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 **GA-ID**  If you need the events to be logged to your Google Analytics account, you can just pass your GA-ID here
 
-**CLIENT-TOKEN** <To be provided by Streamoid>
+**CLIENT-TOKEN** To be provided by Streamoid
 
 2. Add custom attributes to the web page’s relevant HTML elements
 
