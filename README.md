@@ -42,14 +42,14 @@ Assume the client website is integrating a recommendation widget using Streamoid
 **RECOMMENDATION WIDGET**
 For the parent div corresponding to the recommendation widget, add the following attribute and value 
 
-Attribute: streamoid-similar-widget
+- Attribute: streamoid-similar-widget
 
-Value: ProductID of the product in the current product detail page as a string
+- Value: ProductID of the product in the current product detail page as a string
 
 **RECOMMENDED PRODUCT**
 For each div corresponding to a product inside the recommendation widget, add the following attribute and value 
 
-Attribute: streamoid-similar-product
+- Attribute: streamoid-similar-product
 
 Value: ProductID of the recommended product as a string
 
