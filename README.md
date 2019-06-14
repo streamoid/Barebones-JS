@@ -5,20 +5,20 @@ Streamoid's **Barebones-JS** JS SDK provides 2 main features
 
 Features
 
-Wrapper Functions
+**Wrapper Functions**
+
 The wrapper functions are the JS interface to Streamoid’s web services. You can call these wrapper functions to get the JSON response for Streamoid’s web services. The contents of the response can be used to render the UI for, say, Recommendation widget. 
 
 
-Analytics 
+**Analytics**
+
 In the Streamoid JS SDK, events can be logged from the client website by the addition of a few HTML attributes, listed in the section below.
 
-
-
-Integration
+**Integration**
 
 Please follow the below steps for integrating Streamoid JS SDK to your website 
 
-Add this loader script to the head section of the html 
+1. Add this loader script to the head section of the html 
 
 <script>
 (function(i,s,o,g,r,t,a,m){i['PiqitObject']=r;i['PiqitGa']=t;i[r]=i[r]||function(){
@@ -37,25 +37,23 @@ Assume the client website is integrating a recommendation widget using Streamoid
 
 ![](images/Barebones_SDK_reference.png)
 
-RECOMMENDATION WIDGET 
+**RECOMMENDATION WIDGET**
 For the parent div corresponding to the recommendation widget, add the following attribute and value 
 Attribute: streamoid-similar-widget
 Value: ProductID of the product in the current product detail page as a string
 
-RECOMMENDED PRODUCT
+**RECOMMENDED PRODUCT**
 For each div corresponding to a product inside the recommendation widget, add the following attribute and value 
 Attribute: streamoid-similar-product
 Value: ProductID of the recommended product as a string
 
-LEFT ARROW & RIGHT ARROW
+**LEFT ARROW & RIGHT ARROW**
 If the UI has clickable arrows to scroll right and left inside the widget, add the following attribute and value for left and right arrows respectively
 Attribute: streamoid-similar-widget-left-arrow
 Value: ProductID of the product in the current product detail page as a string
 
 Attribute: streamoid-similar-widget-right-arrow
 Value: ProductID of the product in the current product detail page as a string
-
-
 
 3. Add an extra query param for each linked product URL inside the widget
 
@@ -64,8 +62,7 @@ Value: ProductID of the product in the current product detail page as a string
 ?source=similar#strmd_query=<QUERY_PRODUCT_ID>#strmd_result=<RECOMMENDED_PRODUCT_ID>
 
 
-Invoking wrapper functions 
-
+**Invoking wrapper functions**
 
 Once the script has been added in the head tag, as shown above, Streamoid's services can be called by invoking the functions in the STREAMOID_barebones namespace. 
 
