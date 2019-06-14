@@ -43,7 +43,7 @@ b) Clickthroughs
 
 To track Clickthroughs post clicking on a recomended product, ensure that the following query string parameters are appeneded to URL the user is taken to:
 
-?source=similar#strmd_simpar=<QUERY_PRODUCT_ID>#strmd_sim=<RECOMMENDED_PRODUCT_ID>
+?source=similar#strmd_query=<QUERY_PRODUCT_ID>#strmd_result=<RECOMMENDED_PRODUCT_ID>
 
 Usage of query string parameters, 
 
