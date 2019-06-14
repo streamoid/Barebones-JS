@@ -20,19 +20,18 @@ Please follow the below steps for integrating Streamoid JS SDK to your website
 
 1. Add this loader script to the head section of the html 
 
+```
 <script>
 (function(i,s,o,g,r,t,a,m){i['PiqitObject']=r;i['PiqitGa']=t;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','<Loader File>','STREAMOID','<GA-ID>','<CLIENT-TOKEN>' );
 </script>
-
+```
 
 **Loader File**  https://js.sdk.streamoid.com/webtools/static/js/barebone_loader.js
 
-
 **GA-ID**  If you need the events to be logged to your Google Analytics account, you can just pass your GA-ID here
-
 
 **CLIENT-TOKEN** <To be provided by Streamoid>
 
