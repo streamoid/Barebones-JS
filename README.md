@@ -12,7 +12,7 @@ The wrapper functions are the JS interface to Streamoid’s web services. You ca
 
 **Analytics**
 
-In the Streamoid JS SDK, events can be logged from the client website by the addition of a few HTML attributes, listed in the section below.
+In the SDK, events can be logged from the client website by the addition of a few HTML attributes, listed in the section below.
 
 **Integration**
 
