@@ -51,18 +51,18 @@ For each div corresponding to a product inside the recommendation widget, add th
 
 - Attribute: streamoid-similar-product
 
-Value: ProductID of the recommended product as a string
+- Value: ProductID of the recommended product as a string
 
 **LEFT ARROW & RIGHT ARROW**
 If the UI has clickable arrows to scroll right and left inside the widget, add the following attribute and value for left and right arrows respectively
 
-Attribute: streamoid-similar-widget-left-arrow
+- Attribute: streamoid-similar-widget-left-arrow
 
-Value: ProductID of the product in the current product detail page as a string
+- Value: ProductID of the product in the current product detail page as a string
 
-Attribute: streamoid-similar-widget-right-arrow
+- Attribute: streamoid-similar-widget-right-arrow
 
-Value: ProductID of the product in the current product detail page as a string
+- Value: ProductID of the product in the current product detail page as a string
 
 3. Add an extra query param for each linked product URL inside the widget
 
