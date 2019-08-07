@@ -20,7 +20,7 @@ Please follow the below steps for integrating Streamoid JS SDK to your website
 
 ```
 <script>
-(function(i,s,o,g,r,t,a,m){i['PiqitObject']=r;i['PiqitGa']=t;i[r]=i[r]||function(){
+(function(i,s,o,g,r,t,k,a,m){i['PiqitObject']=r;i['PiqitGa']=t;i['PiqitToken']=k;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','<Loader File>','STREAMOID','<GA-ID>','<CLIENT-TOKEN>' );
